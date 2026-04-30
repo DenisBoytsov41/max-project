@@ -249,3 +249,28 @@ a {
     font-size: 10px;
   }
 }
+
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+  padding: 12px 14px;
+  border: 1px solid rgba(226, 232, 240, 0.85);
+  border-radius: var(--ks-radius-lg);
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(16px);
+}
+
+.app-header__company {
+  margin: 0;
+  color: var(--ks-color-text);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.app-header__env {
+  margin: 3px 0 0;
+  color: var(--ks-color-text-muted);
+  font-size: 12px;
+}
