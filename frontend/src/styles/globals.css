@@ -711,3 +711,158 @@ a {
     grid-template-columns: 1fr;
   }
 }
+
+.contacts-page {
+  display: grid;
+  gap: 18px;
+}
+
+.contacts-hero {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 14px;
+  align-items: center;
+  padding: 18px;
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  border-radius: var(--ks-radius-lg);
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
+  backdrop-filter: blur(16px);
+}
+
+.contacts-hero__icon {
+  display: grid;
+  width: 58px;
+  height: 58px;
+  place-items: center;
+  border-radius: 20px;
+  background: var(--ks-color-primary-soft);
+  font-size: 30px;
+}
+
+.contacts-grid {
+  display: grid;
+  gap: 14px;
+}
+
+.contact-card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 14px;
+  align-items: start;
+  padding: 16px;
+  border: 1px solid var(--ks-color-border);
+  border-radius: var(--ks-radius-lg);
+  background: var(--ks-color-surface);
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
+}
+
+.contact-card__icon {
+  display: grid;
+  width: 46px;
+  height: 46px;
+  place-items: center;
+  border-radius: 16px;
+  background: var(--ks-color-primary-soft);
+  font-size: 23px;
+}
+
+.contact-card__content {
+  display: grid;
+  gap: 8px;
+}
+
+.contact-card__title {
+  margin: 0;
+  color: var(--ks-color-text-muted);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.contact-card__value {
+  margin: 0;
+  color: var(--ks-color-text);
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+}
+
+.contact-card__text {
+  margin: 0;
+  color: var(--ks-color-text-muted);
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.contact-cta {
+  display: grid;
+  gap: 12px;
+  padding: 18px;
+  border-radius: var(--ks-radius-lg);
+  background:
+    linear-gradient(135deg, rgba(37, 99, 235, 0.96), rgba(14, 165, 233, 0.9)),
+    var(--ks-color-primary);
+  color: #ffffff;
+  box-shadow: var(--ks-shadow-card);
+}
+
+.contact-cta__title {
+  margin: 0;
+  font-size: 22px;
+  letter-spacing: -0.04em;
+}
+
+.contact-cta__text {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+.contact-cta__actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.contact-cta .app-button--secondary {
+  background: rgba(255, 255, 255, 0.16);
+  color: #ffffff;
+}
+
+.contact-note {
+  padding: 16px;
+  border: 1px solid var(--ks-color-border);
+  border-radius: var(--ks-radius-lg);
+  background: var(--ks-color-surface);
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
+}
+
+.contact-note__title {
+  margin: 0 0 12px;
+  font-size: 18px;
+  letter-spacing: -0.03em;
+}
+
+.contact-note__list {
+  display: grid;
+  gap: 9px;
+  margin: 0;
+  padding-left: 20px;
+  color: var(--ks-color-text-muted);
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+@media (max-width: 520px) {
+  .contact-cta__actions {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 420px) {
+  .contacts-hero,
+  .contact-card {
+    grid-template-columns: 1fr;
+  }
+}
