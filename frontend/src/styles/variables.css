@@ -1,0 +1,23 @@
+:root {
+  --ks-color-bg: #f3f6fb;
+  --ks-color-surface: #ffffff;
+  --ks-color-surface-soft: #f8fafc;
+  --ks-color-primary: #2563eb;
+  --ks-color-primary-dark: #1d4ed8;
+  --ks-color-primary-soft: #dbeafe;
+  --ks-color-text: #0f172a;
+  --ks-color-text-muted: #64748b;
+  --ks-color-border: #e2e8f0;
+  --ks-color-success: #16a34a;
+  --ks-color-warning: #f59e0b;
+  --ks-color-danger: #dc2626;
+
+  --ks-radius-sm: 10px;
+  --ks-radius-md: 16px;
+  --ks-radius-lg: 22px;
+
+  --ks-shadow-card: 0 14px 35px rgba(15, 23, 42, 0.08);
+
+  --ks-page-max-width: 720px;
+  --ks-bottom-nav-height: 76px;
+}
