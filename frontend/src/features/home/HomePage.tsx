@@ -54,6 +54,13 @@ export function HomePage() {
           text="Телефон, почта, график работы и способы связи с поддержкой."
           onClick={() => navigate(routes.contacts)}
         />
+
+        <ActionCard
+          icon="ℹ️"
+          title="О компании"
+          text="Кратко о К-Сервис, возможностях приложения и планах развития."
+          onClick={() => navigate(routes.about)}
+        />
       </section>
 
       <section className="info-panel">
