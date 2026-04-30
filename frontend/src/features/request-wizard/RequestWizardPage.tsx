@@ -1,10 +1,12 @@
 import { useEffect, useMemo, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 
 import {
   disableClosingConfirmation,
   enableClosingConfirmation,
 } from '../../services/max/maxBridge';
 import type {
+  IssueCategoryId,
   RequestWizardData,
   RequestWizardStep,
 } from './requestWizardTypes';
@@ -14,6 +16,10 @@ import { DescriptionStep } from './steps/DescriptionStep';
 import { ProblemStep } from './steps/ProblemStep';
 import { ResultStep } from './steps/ResultStep';
 import { UrgencyStep } from './steps/UrgencyStep';
+
+type RequestLocationState = {
+  categoryId?: IssueCategoryId;
+};
 
 const initialData: RequestWizardData = {
   categoryId: '',
@@ -35,8 +41,17 @@ const steps: RequestWizardStep[] = [
 ];
 
 export function RequestWizardPage() {
-  const [data, setData] = useState<RequestWizardData>(initialData);
-  const [activeStep, setActiveStep] = useState<RequestWizardStep>('category');
+  const location = useLocation();
+  const locationState = location.state as RequestLocationState | null;
+
+  const [data, setData] = useState<RequestWizardData>(() => ({
+    ...initialData,
+    categoryId: locationState?.categoryId ?? '',
+  }));
+
+  const [activeStep, setActiveStep] = useState<RequestWizardStep>(() =>
+    locationState?.categoryId ? 'problem' : 'category',
+  );
 
   const activeStepIndex = useMemo(() => steps.indexOf(activeStep), [activeStep]);
 
