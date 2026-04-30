@@ -12,7 +12,7 @@ export function ActionCard({ icon, title, text, onClick }: ActionCardProps) {
     <button className="action-card" type="button" onClick={onClick}>
       <span className="action-card__icon">{icon}</span>
 
-      <span>
+      <span className="action-card__content">
         <span className="action-card__title">{title}</span>
         <span className="action-card__text">{text}</span>
       </span>
